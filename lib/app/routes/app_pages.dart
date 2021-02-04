@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_sourcing/app/views/about_view.dart';
 import 'package:hello_sourcing/app/views/contact_view.dart';
