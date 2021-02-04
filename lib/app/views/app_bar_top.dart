@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_sourcing/app/views/styles/colors.dart';
 
 import 'styles/text_style.dart';
 
@@ -15,7 +16,7 @@ class AppBarTop extends StatelessWidget {
             children: [
               Icon(
                 Icons.phone,
-                color: Color.fromRGBO(145, 145, 145, 1.0),
+                color: topBarColor,
                 size: 11,
               ),
               Text(
@@ -25,7 +26,7 @@ class AppBarTop extends StatelessWidget {
               SizedBox(width: 20),
               Icon(
                 Icons.mail,
-                color: Color.fromRGBO(145, 145, 145, 1.0),
+                color: topBarColor,
                 size: 11,
               ),
               Text(
@@ -35,7 +36,7 @@ class AppBarTop extends StatelessWidget {
               SizedBox(width: 20),
               Icon(
                 Icons.map,
-                color: Color.fromRGBO(145, 145, 145, 1.0),
+                color: topBarColor,
                 size: 11,
               ),
               Text(

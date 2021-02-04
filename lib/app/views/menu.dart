@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hello_sourcing/app/routes/app_pages.dart';
 
 import 'styles/text_style.dart';
 
@@ -16,9 +18,14 @@ class Menu extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      child: Image.asset('img/invert-logo.png'),
+                    FlatButton(
+                      onPressed: () {
+                        Get.toNamed(Routes.HOME);
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        child: Image.asset('img/invert-logo.png'),
+                      ),
                     )
                   ],
                 ),
@@ -28,7 +35,9 @@ class Menu extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(Routes.ABOUT);
+                      },
                       child: Text(
                         'ABOUT',
                         style: textStyleMenu,
@@ -36,7 +45,9 @@ class Menu extends StatelessWidget {
                     ),
                     SizedBox(width: 27),
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(Routes.SERVICE);
+                      },
                       child: Text(
                         'SERVICE',
                         style: textStyleMenu,
@@ -44,7 +55,9 @@ class Menu extends StatelessWidget {
                     ),
                     SizedBox(width: 27),
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(Routes.INFOGRAPHIC);
+                      },
                       child: Text(
                         'INFOGRAPHIC',
                         style: textStyleMenu,
@@ -52,7 +65,9 @@ class Menu extends StatelessWidget {
                     ),
                     SizedBox(width: 27),
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(Routes.CONTACT);
+                      },
                       child: Text(
                         'CONTACT',
                         style: textStyleMenu,

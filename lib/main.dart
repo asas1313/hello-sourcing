@@ -10,6 +10,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: "Application",
       initialRoute: AppPages.INITIAL,
+      defaultTransition: Transition.leftToRightWithFade,
       getPages: AppPages.routes,
     ),
   );
