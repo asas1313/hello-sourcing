@@ -26,7 +26,7 @@ class ContactView extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             child: Image.asset(
-              'img/istockphoto-1176263278-170667a.jpg',
+              'assets/img/istockphoto-1176263278-170667a.jpg',
               fit: BoxFit.fitWidth,
             ),
           ),

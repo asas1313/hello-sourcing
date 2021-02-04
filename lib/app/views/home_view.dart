@@ -15,6 +15,7 @@ class HomeView extends GetMaterialApp {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: topBarColor,
         title: AppBarTop(),
       ),

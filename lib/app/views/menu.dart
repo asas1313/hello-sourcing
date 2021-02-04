@@ -24,7 +24,7 @@ class Menu extends StatelessWidget {
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
-                        child: Image.asset('img/invert-logo.png'),
+                        child: Image.asset('assets/img/invert-logo.png'),
                       ),
                     )
                   ],
