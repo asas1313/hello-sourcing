@@ -6,13 +6,14 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  get: 3.24.0
+  animations: ^2.0.0
+  get: 4.1.3
+  responsive_builder: ^0.4.1
 
 dev_dependencies:
   flutter_test:
@@ -23,12 +24,12 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
-  
+
   assets:
     - assets/img/invert-logo.png
     - assets/img/istockphoto-1176263278-170667a.jpg
     - assets/img/pexels-lukas-669612.jpg
-    - assets/img/pexels-pixabay-265087.jpg
+    - assets/img/Bangkok.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

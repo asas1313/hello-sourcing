@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hello_sourcing/app/views/styles/colors.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
 
-class ServiceView extends StatelessWidget {
+class WhoWeAreView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
@@ -10,17 +11,19 @@ class ServiceView extends StatelessWidget {
           Spacer(),
           Spacer(),
           Container(
-            color: Color.fromRGBO(0, 0, 0, 0.50),
+            color: textBackgroundColor,
             child: Text(
-              'Service',
+              'Who We Are',
               style: textStyleTitle,
             ),
           ),
           Container(
-            color: Color.fromRGBO(0, 0, 0, 0.50),
+            margin: EdgeInsets.all(25.0),
+            color: textBackgroundColor,
             child: Text(
-              'research and development of products for e sellers.',
+              'We have more than 10 years of experience in sourcing products and exporting between Asia and Europe. \nOur objectives have always been to work in mutual trust and understanding with our customers.',
               style: textStyleNormal,
+              textAlign: TextAlign.center,
             ),
           ),
           Spacer(),

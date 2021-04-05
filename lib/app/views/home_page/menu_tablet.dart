@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_sourcing/app/routes/app_pages.dart';
 
-import 'styles/text_style.dart';
+import '../styles/text_style.dart';
 
-class Menu extends StatelessWidget {
+class MenuTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +18,7 @@ class Menu extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    FlatButton(
+                    TextButton(
                       onPressed: () {
                         Get.toNamed(Routes.HOME);
                       },
@@ -34,42 +34,52 @@ class Menu extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    FlatButton(
+                    TextButton(
                       onPressed: () {
-                        Get.toNamed(Routes.ABOUT);
+                        Get.toNamed(Routes.TRUSTCONFIDENCE);
                       },
                       child: Text(
-                        'ABOUT',
+                        'Trust & Confidence',
                         style: textStyleMenu,
                       ),
                     ),
                     SizedBox(width: 27),
-                    FlatButton(
+                    TextButton(
                       onPressed: () {
-                        Get.toNamed(Routes.SERVICE);
+                        Get.toNamed(Routes.WHOWEARE);
                       },
                       child: Text(
-                        'SERVICE',
+                        'Who are we?',
                         style: textStyleMenu,
                       ),
                     ),
                     SizedBox(width: 27),
-                    FlatButton(
+                    TextButton(
                       onPressed: () {
-                        Get.toNamed(Routes.INFOGRAPHIC);
+                        Get.toNamed(Routes.PRODUCTS);
                       },
                       child: Text(
-                        'INFOGRAPHIC',
+                        'Products',
                         style: textStyleMenu,
                       ),
                     ),
                     SizedBox(width: 27),
-                    FlatButton(
+                    TextButton(
+                      onPressed: () {
+                        Get.toNamed(Routes.OBJECTIVES);
+                      },
+                      child: Text(
+                        'Objectives',
+                        style: textStyleMenu,
+                      ),
+                    ),
+                    SizedBox(width: 27),
+                    TextButton(
                       onPressed: () {
                         Get.toNamed(Routes.CONTACT);
                       },
                       child: Text(
-                        'CONTACT',
+                        'Contact',
                         style: textStyleMenu,
                       ),
                     ),

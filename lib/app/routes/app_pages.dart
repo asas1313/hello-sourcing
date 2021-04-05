@@ -1,10 +1,13 @@
+import 'package:animations/animations.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_sourcing/app/views/about_view.dart';
 import 'package:hello_sourcing/app/views/contact_view.dart';
-import 'package:hello_sourcing/app/views/home_view.dart';
-import 'package:hello_sourcing/app/views/infographic_view.dart';
+import 'package:hello_sourcing/app/views/home_page/home_page.dart';
 import 'package:hello_sourcing/app/views/main_view.dart';
-import 'package:hello_sourcing/app/views/service_view.dart';
+import 'package:hello_sourcing/app/views/objectives_view.dart';
+import 'package:hello_sourcing/app/views/products_view.dart';
+import 'package:hello_sourcing/app/views/trustconfidence_view.dart';
+import 'package:hello_sourcing/app/views/whoweare_view.dart';
 
 part 'app_routes.dart';
 
@@ -14,31 +17,37 @@ class AppPages {
   static final routes = [
     GetPage(
       name: Routes.HOME,
-      page: () => HomeView(
+      page: () => HomePage(
         child: MainView(),
       ),
     ),
     GetPage(
-      name: Routes.ABOUT,
-      page: () => HomeView(
-        child: AboutView(),
+      name: Routes.TRUSTCONFIDENCE,
+      page: () => HomePage(
+        child: TrustConfidenceView(),
       ),
     ),
     GetPage(
-      name: Routes.SERVICE,
-      page: () => HomeView(
-        child: ServiceView(),
+      name: Routes.WHOWEARE,
+      page: () => HomePage(
+        child: WhoWeAreView(),
       ),
     ),
     GetPage(
-      name: Routes.INFOGRAPHIC,
-      page: () => HomeView(
-        child: InfographicView(),
+      name: Routes.PRODUCTS,
+      page: () => HomePage(
+        child: ProductsView(),
+      ),
+    ),
+    GetPage(
+      name: Routes.OBJECTIVES,
+      page: () => HomePage(
+        child: ObjectivesView(),
       ),
     ),
     GetPage(
       name: Routes.CONTACT,
-      page: () => HomeView(
+      page: () => HomePage(
         child: ContactView(),
       ),
     ),

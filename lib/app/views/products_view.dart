@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hello_sourcing/app/views/styles/colors.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
 
-class InfographicView extends StatelessWidget {
+class ProductsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
@@ -10,9 +11,9 @@ class InfographicView extends StatelessWidget {
           Spacer(),
           Spacer(),
           Container(
-            color: Color.fromRGBO(0, 0, 0, 0.50),
+            color: textBackgroundColor,
             child: Text(
-              'Infogrphic',
+              'Products',
               style: textStyleTitle,
             ),
           ),
