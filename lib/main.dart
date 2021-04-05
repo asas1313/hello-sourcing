@@ -8,9 +8,8 @@ void main() {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Application",
+      title: "HelloSourcing Co,.Ltd",
       initialRoute: AppPages.INITIAL,
-      defaultTransition: Transition.leftToRightWithFade,
       getPages: AppPages.routes,
     ),
   );

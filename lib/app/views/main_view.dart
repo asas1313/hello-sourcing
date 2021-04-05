@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_sourcing/app/views/styles/colors.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
 
 class MainView extends StatelessWidget {
@@ -8,19 +9,11 @@ class MainView extends StatelessWidget {
       child: Column(
         children: [
           Spacer(),
-          Spacer(),
           Container(
-            color: Color.fromRGBO(0, 0, 0, 0.50),
+            color: textBackgroundColor,
             child: Text(
-              'Home Page',
+              'Hello Sourcing',
               style: textStyleTitle,
-            ),
-          ),
-          Container(
-            color: Color.fromRGBO(0, 0, 0, 0.50),
-            child: Text(
-              'with scrolls to display different information',
-              style: textStyleNormal,
             ),
           ),
           Spacer(),
