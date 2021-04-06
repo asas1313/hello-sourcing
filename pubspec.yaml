@@ -27,16 +27,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/img/invert-logo.png
-    - assets/img/Bangkok.png
-    - assets/img/products/IMG_3893.png
-    - assets/img/products/IMG_3894.png
-    - assets/img/products/IMG_3896.png
-    - assets/img/products/IMG_3897.png
-    - assets/img/products/IMG_3898.png
-    - assets/img/products/IMG_3902.png
-    - assets/img/contacts/IMG_3924.png
-    - assets/img/contacts/IMG_3928.png
+    - assets/img/
+    - assets/img/products/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_sourcing/app/routes/app_pages.dart';
+import 'package:hello_sourcing/app/views/styles/logo.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
 
 class NavigationDrawer extends StatelessWidget {
@@ -21,10 +22,7 @@ class NavigationDrawer extends StatelessWidget {
                   onPressed: () {
                     Get.toNamed(Routes.HOME);
                   },
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    child: Image.asset('assets/img/invert-logo.png'),
-                  ),
+                  child: Logo(),
                 ),
                 SizedBox(width: 15),
                 TextButton(

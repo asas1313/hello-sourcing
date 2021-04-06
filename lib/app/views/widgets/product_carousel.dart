@@ -31,8 +31,8 @@ class ProductCarousel extends StatelessWidget {
       items: imagesList
           .map(
             (item) => Center(
-              child: Image.network(
-                item,
+              child: Image(
+                image: AssetImage(item),
                 fit: BoxFit.cover,
               ),
             ),

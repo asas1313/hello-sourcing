@@ -26,7 +26,7 @@ class HomePage extends GetMaterialApp {
               Menu(),
               Expanded(
                 child: child,
-              )
+              ),
             ],
           ),
         ),
