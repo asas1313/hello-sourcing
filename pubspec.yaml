@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   animations: ^2.0.0
+  carousel_slider: 4.0.0-nullsafety.0
   get: 4.1.3
   responsive_builder: ^0.4.1
 
@@ -27,9 +28,15 @@ flutter:
 
   assets:
     - assets/img/invert-logo.png
-    - assets/img/istockphoto-1176263278-170667a.jpg
-    - assets/img/pexels-lukas-669612.jpg
     - assets/img/Bangkok.png
+    - assets/img/products/IMG_3893.png
+    - assets/img/products/IMG_3894.png
+    - assets/img/products/IMG_3896.png
+    - assets/img/products/IMG_3897.png
+    - assets/img/products/IMG_3898.png
+    - assets/img/products/IMG_3902.png
+    - assets/img/contacts/IMG_3924.png
+    - assets/img/contacts/IMG_3928.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
