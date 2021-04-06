@@ -19,8 +19,17 @@ class ProductsView extends StatelessWidget {
           ),
         ),
         Container(
+          margin: EdgeInsets.all(25.0),
+          color: textBackgroundColor,
+          child: Text(
+            'In 2020, we sourced over 2,000 products from cosmetics, electronics, jewelry, personal protective equipment, and we branded over 300 items.',
+            style: textStyleNormal,
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Container(
           color: Color.fromRGBO(0, 0, 0, 0.50),
-          width: Get.width / 1.5,
+          width: Get.width / 2,
           child: ProductCarousel(),
         ),
         Spacer(),
