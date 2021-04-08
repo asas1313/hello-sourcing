@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_sourcing/app/views/styles/colors.dart';
-import 'package:hello_sourcing/app/views/styles/text_style.dart';
+import 'package:hello_sourcing/app/views/styles/text_container.dart';
 
 class MainView extends StatelessWidget {
   @override
@@ -8,12 +7,8 @@ class MainView extends StatelessWidget {
     return Column(
       children: [
         Spacer(),
-        Container(
-          color: textBackgroundColor,
-          child: Text(
-            'Hello Sourcing',
-            style: textStyleTitle,
-          ),
+        TextContainerHeading(
+          text: 'Hello Sourcing Co, Ltd',
         ),
         Spacer(),
       ],
