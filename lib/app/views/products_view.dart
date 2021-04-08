@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_sourcing/app/views/styles/colors.dart';
-import 'package:hello_sourcing/app/views/styles/text_style.dart';
 import 'package:hello_sourcing/app/views/widgets/product_carousel.dart';
+
+import 'styles/text_container.dart';
 
 class ProductsView extends StatelessWidget {
   @override
@@ -11,24 +11,17 @@ class ProductsView extends StatelessWidget {
       children: [
         Spacer(),
         Spacer(),
-        Container(
-          color: textBackgroundColor,
-          child: Text(
-            'Products',
-            style: textStyleTitle,
-          ),
+        TextContainerHeading(
+          text: 'Products',
         ),
-        Container(
-          margin: EdgeInsets.all(25.0),
-          color: textBackgroundColor,
-          child: Text(
-            'In 2020, we sourced over 2,000 products from cosmetics, electronics, jewelry, personal protective equipment, and we branded over 300 items.',
-            style: textStyleNormal,
-            textAlign: TextAlign.center,
-          ),
+        Spacer(),
+        TextContainerNormal(
+          text:
+              'In 2020, we sourced over 2,000 products from cosmetics, electronics, jewelry, personal protective equipment, and we branded over 300 items.',
         ),
+        Spacer(),
         Container(
-          color: Color.fromRGBO(0, 0, 0, 0.50),
+          color: Color.fromRGBO(0, 0, 0, 0.75),
           width: Get.width / 2,
           child: ProductCarousel(),
         ),
