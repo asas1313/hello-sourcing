@@ -1,7 +1,8 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_sourcing/app/views/contact_view.dart';
+import 'package:hello_sourcing/app/views/home_page/other_page.dart';
+import 'package:hello_sourcing/app/views/widgets/contact_view/contact_view.dart';
 import 'package:hello_sourcing/app/views/home_page/home_page.dart';
 import 'package:hello_sourcing/app/views/main_view.dart';
 import 'package:hello_sourcing/app/views/objectives_view.dart';
@@ -23,7 +24,7 @@ class AppPages {
     ),
     GetPage(
       name: Routes.TRUSTCONFIDENCE,
-      page: () => HomePage(
+      page: () => OtherPage(
         child: TrustConfidenceView(),
       ),
     ),

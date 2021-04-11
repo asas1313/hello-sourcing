@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_sourcing/app/views/styles/colors.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
 
 class TextContainerHeading extends StatelessWidget {
@@ -13,7 +14,7 @@ class TextContainerHeading extends StatelessWidget {
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        color: Colors.white,
+        color: textBackgroundColor,
       ),
       child: Text(
         text,
@@ -35,7 +36,7 @@ class TextContainerNormal extends StatelessWidget {
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        color: Colors.white,
+        color: textBackgroundColor,
       ),
       child: Text(
         text,

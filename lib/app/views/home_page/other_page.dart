@@ -7,10 +7,10 @@ import 'package:hello_sourcing/app/views/styles/background_decoration.dart';
 import 'package:hello_sourcing/app/views/styles/colors.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class HomePage extends GetMaterialApp {
+class OtherPage extends GetMaterialApp {
   final Widget child;
 
-  HomePage({required this.child});
+  OtherPage({required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,13 @@ class HomePage extends GetMaterialApp {
             : null,
         backgroundColor: backgroundColor,
         body: Container(
-          decoration: backgroundDecoration,
           child: Column(
             children: <Widget>[
-              Menu(),
+              Container(
+                height: Get.height / 2,
+                decoration: backgroundDecoration,
+                child: Menu(),
+              ),
               Expanded(
                 child: child,
               ),
