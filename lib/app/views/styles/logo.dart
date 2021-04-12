@@ -5,7 +5,7 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(8),
-      child: Image.asset('assets/img/invert-logo.png'),
+      child: Image.asset('assets/img/logo.png'),
     );
   }
 }

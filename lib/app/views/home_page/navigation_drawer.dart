@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_sourcing/app/routes/app_pages.dart';
+import 'package:hello_sourcing/app/routes/routing_controller.dart';
 import 'package:hello_sourcing/app/views/styles/logo.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
 
-class NavigationDrawer extends StatelessWidget {
+class NavigationDrawer extends GetWidget<RoutingController> {
   const NavigationDrawer({Key? key}) : super(key: key);
 
   @override
@@ -20,14 +21,14 @@ class NavigationDrawer extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(Routes.HOME);
+                    controller.scrollToIndex(Routes.HOME);
                   },
                   child: Logo(),
                 ),
                 SizedBox(width: 15),
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(Routes.TRUSTCONFIDENCE);
+                    controller.scrollToIndex(Routes.TRUSTCONFIDENCE);
                   },
                   child: Text(
                     'Trust & Confidence',
@@ -37,7 +38,7 @@ class NavigationDrawer extends StatelessWidget {
                 SizedBox(width: 27),
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(Routes.WHOWEARE);
+                    controller.scrollToIndex(Routes.WHOWEARE);
                   },
                   child: Text(
                     'Who are we?',
@@ -47,7 +48,7 @@ class NavigationDrawer extends StatelessWidget {
                 SizedBox(width: 27),
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(Routes.PRODUCTS);
+                    controller.scrollToIndex(Routes.PRODUCTS);
                   },
                   child: Text(
                     'Products',
@@ -57,7 +58,7 @@ class NavigationDrawer extends StatelessWidget {
                 SizedBox(width: 27),
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(Routes.OBJECTIVES);
+                    controller.scrollToIndex(Routes.OBJECTIVES);
                   },
                   child: Text(
                     'Objectives',
@@ -67,7 +68,7 @@ class NavigationDrawer extends StatelessWidget {
                 SizedBox(width: 27),
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(Routes.CONTACT);
+                    controller.scrollToIndex(Routes.CONTACT);
                   },
                   child: Text(
                     'Contact',

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_sourcing/app/routes/app_pages.dart';
+import 'package:hello_sourcing/app/routes/routing_controller.dart';
 import 'package:hello_sourcing/app/views/styles/logo.dart';
 
-class MenuMobile extends StatelessWidget {
+class MenuMobile extends GetWidget<RoutingController> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +30,7 @@ class MenuMobile extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        Get.toNamed(Routes.HOME);
+                        controller.scrollToIndex(Routes.HOME);
                       },
                       child: Logo(),
                     ),
