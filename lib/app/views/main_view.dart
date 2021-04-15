@@ -4,9 +4,7 @@ class MainView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        Spacer(),
-      ],
+      children: [],
     );
   }
 }

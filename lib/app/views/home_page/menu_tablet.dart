@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_sourcing/app/routes/app_pages.dart';
+import 'package:hello_sourcing/app/routes/app_routes.dart';
 import 'package:hello_sourcing/app/routes/routing_controller.dart';
 import 'package:hello_sourcing/app/views/styles/logo.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -13,7 +13,7 @@ class MenuTablet extends GetWidget<RoutingController> {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Container(
         color: Color.fromRGBO(0, 0, 0, 0.25),
-        padding: const EdgeInsets.all(32),
+        padding: const EdgeInsets.all(8),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
@@ -69,6 +69,16 @@ class MenuTablet extends GetWidget<RoutingController> {
                         },
                         child: Text(
                           'Objectives',
+                          style: textStyleMenu,
+                        ),
+                      ),
+                      SizedBox(width: 27),
+                      TextButton(
+                        onPressed: () {
+                          controller.scrollToIndex(Routes.OFFICE);
+                        },
+                        child: Text(
+                          'Office',
                           style: textStyleMenu,
                         ),
                       ),

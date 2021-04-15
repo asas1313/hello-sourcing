@@ -6,22 +6,23 @@ import 'styles/colors.dart';
 class TrustConfidenceView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: backgroundColor,
-      child: Column(
-        children: [
-          Spacer(),
-          Spacer(),
-          TextContainerHeading(
-            text: 'Trust & Confidence',
-          ),
-          Spacer(),
-          TextContainerNormal(
-            text:
-                'Your local sourcing partner in Asia, from Dropshipping profile, to a mass production follow-up and deliveries.',
-          ),
-          Spacer(),
-        ],
+    return FittedBox(
+      fit: BoxFit.contain,
+      child: Container(
+        color: backgroundColor,
+        height: 800,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            TextContainerHeading(
+              text: 'Trust & Confidence',
+            ),
+            TextContainerNormal(
+              text:
+                  'Your local sourcing partner in Asia, from Dropshipping profile, to a mass production follow-up and deliveries.',
+            ),
+          ],
+        ),
       ),
     );
   }

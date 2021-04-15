@@ -28,7 +28,8 @@ class OtherPage extends GetMaterialApp {
                 decoration: backgroundDecoration,
                 child: Menu(),
               ),
-              Expanded(
+              Flexible(
+                fit: FlexFit.loose,
                 child: child,
               ),
             ],

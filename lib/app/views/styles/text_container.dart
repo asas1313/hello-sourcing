@@ -16,7 +16,7 @@ class TextContainerHeading extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
         color: textBackgroundColor,
       ),
-      child: Text(
+      child: SelectableText(
         text,
         style: textStyleTitle,
       ),
@@ -26,8 +26,12 @@ class TextContainerHeading extends StatelessWidget {
 
 class TextContainerNormal extends StatelessWidget {
   final String text;
+  final TextStyle textStyle;
 
-  const TextContainerNormal({required this.text});
+  TextContainerNormal({
+    required this.text,
+    this.textStyle = textStyleNormal,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +42,9 @@ class TextContainerNormal extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
         color: textBackgroundColor,
       ),
-      child: Text(
+      child: SelectableText(
         text,
-        style: textStyleNormal,
+        style: textStyle,
       ),
     );
   }

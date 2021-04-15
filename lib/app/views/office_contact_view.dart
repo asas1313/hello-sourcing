@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hello_sourcing/app/views/styles/text_container.dart';
 
 import 'styles/colors.dart';
+import 'styles/text_container.dart';
+import 'styles/text_style.dart';
 
-class WhoWeAreView extends StatelessWidget {
+class OfficeContactView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FittedBox(
@@ -15,11 +16,12 @@ class WhoWeAreView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             TextContainerHeading(
-              text: 'Who We Are',
+              text: 'Office',
             ),
             TextContainerNormal(
               text:
-                  'We have more than 10 years of experience in sourcing products and exporting between Asia and Europe. \nOur objectives have always been to work in mutual trust and understanding with our customers.',
+                  'HelloSourcing Co.,Ltd\n88/204 The Plant Prestige, Mu5,\nBaan Mai, Pakkret, 11110 Nonthaburi\nThailand',
+              textStyle: textStyleNormal,
             ),
           ],
         ),

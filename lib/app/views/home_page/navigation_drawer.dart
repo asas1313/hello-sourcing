@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_sourcing/app/routes/app_pages.dart';
+import 'package:hello_sourcing/app/routes/app_routes.dart';
 import 'package:hello_sourcing/app/routes/routing_controller.dart';
 import 'package:hello_sourcing/app/views/styles/logo.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';

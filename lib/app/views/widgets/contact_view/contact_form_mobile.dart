@@ -7,14 +7,17 @@ import 'message_form.dart';
 class ContactFormMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: backgroundColor,
-      child: Column(
-        children: [
-          MessageForm(),
-          Spacer(),
-          DetailsForm(),
-        ],
+    return FittedBox(
+      fit: BoxFit.contain,
+      child: Container(
+        color: backgroundColor,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            MessageForm(),
+            DetailsForm(mobile: true),
+          ],
+        ),
       ),
     );
   }
