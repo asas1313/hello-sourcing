@@ -68,6 +68,16 @@ class NavigationDrawer extends GetWidget<RoutingController> {
                 SizedBox(width: 27),
                 TextButton(
                   onPressed: () {
+                    controller.scrollToIndex(Routes.OFFICE);
+                  },
+                  child: Text(
+                    'Office',
+                    style: textStyleMenu,
+                  ),
+                ),
+                SizedBox(width: 27),
+                TextButton(
+                  onPressed: () {
                     controller.scrollToIndex(Routes.CONTACT);
                   },
                   child: Text(

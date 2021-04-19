@@ -16,7 +16,7 @@ class DetailsForm extends StatelessWidget {
       fit: BoxFit.contain,
       child: Container(
         color: backgroundColor,
-        height: 800,
+        height: 1000,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
