@@ -23,12 +23,12 @@
 </head>
 
 <body>
-
-  if ('serviceWorker' in navigator) {
-  window.addEventListener('flutter-first-frame', function () {
-  navigator.serviceWorker.register('flutter_service_worker.js');
-  });
-  }
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
   </script>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hello_sourcing/app/views/styles/text_container.dart';
 
 import 'styles/colors.dart';
@@ -10,7 +11,8 @@ class TrustConfidenceView extends StatelessWidget {
       fit: BoxFit.contain,
       child: Container(
         color: backgroundColor,
-        height: 800,
+        width: Get.width / 1.5,
+        height: 600,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

@@ -15,12 +15,14 @@ class MessageForm extends StatelessWidget {
     return FittedBox(
       fit: BoxFit.contain,
       child: Container(
+        padding: EdgeInsets.all(20),
         color: backgroundColor,
-        width: 800,
+        width: Get.width / 4,
+        height: 500,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TextContainerHeading(text: 'Contact Form'),
+            TextContainerNormal(text: 'Contact Form'),
             TextFormField(
               controller: nameController,
               decoration: InputDecoration(
@@ -50,8 +52,12 @@ class MessageForm extends StatelessWidget {
                   labelStyle: TextStyle(color: Colors.white)),
               style: TextStyle(color: Colors.white),
             ),
-            ElevatedButton(
-                onPressed: () => sendMessage(), child: Text('SUBMIT'))
+            SizedBox(height: 25),
+            ConstrainedBox(
+              constraints: BoxConstraints.tightFor(width: Get.width / 4),
+              child: ElevatedButton(
+                  onPressed: () => sendMessage(), child: Text('SUBMIT')),
+            )
           ],
         ),
       ),
@@ -59,19 +65,37 @@ class MessageForm extends StatelessWidget {
   }
 
   void sendMessage() {
-    FirebaseFirestore.instance.collection('mail').doc().set({
-      'to': 'a.riauba@gmail.com',
+    if (!emailController.text.isEmail ||
+        (questionController.text.isEmpty && messageController.text.isEmpty)) {
+      Get.snackbar(
+        'Error',
+        'Please provide your e-mail and question or message!',
+        backgroundColor: Colors.red,
+      );
+      return null;
+    }
+    FirebaseFirestore.instance.collection('mail').add({
+      'to': 'sylvain@hellosourcing.asia',
       'message': {
         'from': emailController.text,
-        'reply-to': emailController.text,
-        'subject': nameController.text,
-        'html': 'Question: ' +
+        'subject': nameController.text + ' sent a message for You',
+        'html': 'Name: ' +
+            nameController.text +
+            '.<br/>E-mail: ' +
+            emailController.text +
+            '.<br/>Question: ' +
             questionController.text +
-            '.</br>' +
+            '.<br/>Message: ' +
             messageController.text,
       },
     }).then((value) {
       Get.snackbar('Information', 'Message sent.');
+      emailController.text = '';
+      nameController.text = '';
+      questionController.text = '';
+      messageController.text = '';
+    }).catchError((error) {
+      print("Failed to save email: $error");
     });
     Get.back();
   }

@@ -12,7 +12,8 @@ class ProductsView extends StatelessWidget {
       fit: BoxFit.contain,
       child: Container(
         color: backgroundColor,
-        height: 800,
+        width: Get.width / 1.5,
+        height: 600,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -25,7 +26,7 @@ class ProductsView extends StatelessWidget {
             ),
             Container(
               color: Color.fromRGBO(0, 0, 0, 0.75),
-              width: Get.width / 1.8,
+              width: Get.width / 2.2,
               child: ProductCarousel(),
             ),
           ],

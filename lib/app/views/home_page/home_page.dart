@@ -29,9 +29,6 @@ class HomePage extends GetWidget<RoutingController> {
                   controller: controller.controller,
                   children: List.generate(controller.pages.length, (index) {
                     return Container(
-                      decoration: index == 0
-                          ? null
-                          : BoxDecoration(color: backgroundColor),
                       child: controller.pages[index],
                     );
                   }),

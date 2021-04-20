@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'styles/colors.dart';
 import 'styles/text_container.dart';
@@ -11,7 +12,8 @@ class OfficeContactView extends StatelessWidget {
       fit: BoxFit.contain,
       child: Container(
         color: backgroundColor,
-        height: 800,
+        width: Get.width / 1.5,
+        height: 600,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
