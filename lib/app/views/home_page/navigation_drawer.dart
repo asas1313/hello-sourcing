@@ -78,10 +78,20 @@ class NavigationDrawer extends GetWidget<RoutingController> {
                 SizedBox(width: 27),
                 TextButton(
                   onPressed: () {
-                    controller.scrollToIndex(Routes.CONTACT);
+                    controller.scrollToIndex(Routes.CONTACTUS);
                   },
                   child: Text(
-                    'Contact',
+                    'Contact Us',
+                    style: textStyleMenu,
+                  ),
+                ),
+                SizedBox(width: 27),
+                TextButton(
+                  onPressed: () {
+                    controller.scrollToIndex(Routes.OURCONTACTS);
+                  },
+                  child: Text(
+                    'Our Contacts',
                     style: textStyleMenu,
                   ),
                 ),

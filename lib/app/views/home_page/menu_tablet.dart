@@ -28,7 +28,7 @@ class MenuTablet extends GetWidget<RoutingController> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Container(
-                  width: Get.width / 2,
+                  width: Get.width / 1.5,
                   child: Wrap(
                     alignment: WrapAlignment.end,
                     direction: Axis.horizontal,
@@ -85,10 +85,20 @@ class MenuTablet extends GetWidget<RoutingController> {
                       SizedBox(width: 27),
                       TextButton(
                         onPressed: () {
-                          controller.scrollToIndex(Routes.CONTACT);
+                          controller.scrollToIndex(Routes.CONTACTUS);
                         },
                         child: Text(
-                          'Contact',
+                          'Contact Us',
+                          style: textStyleMenu,
+                        ),
+                      ),
+                      SizedBox(width: 27),
+                      TextButton(
+                        onPressed: () {
+                          controller.scrollToIndex(Routes.OURCONTACTS);
+                        },
+                        child: Text(
+                          'Our Contacts',
                           style: textStyleMenu,
                         ),
                       ),

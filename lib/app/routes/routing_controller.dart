@@ -6,7 +6,8 @@ import 'package:hello_sourcing/app/views/office_contact_view.dart';
 import 'package:hello_sourcing/app/views/products_view.dart';
 import 'package:hello_sourcing/app/views/trustconfidence_view.dart';
 import 'package:hello_sourcing/app/views/whoweare_view.dart';
-import 'package:hello_sourcing/app/views/widgets/contact_view/contact_view.dart';
+import 'package:hello_sourcing/app/views/our_contacts_view.dart';
+import 'package:hello_sourcing/app/views/contactus_view.dart';
 
 class RoutingController extends GetxController {
   PageController controller = PageController();
@@ -18,7 +19,8 @@ class RoutingController extends GetxController {
     ProductsView(),
     ObjectivesView(),
     OfficeContactView(),
-    ContactView(),
+    ContactUsView(),
+    OurContactsView()
   ];
 
   void scrollToIndex(int index) {
