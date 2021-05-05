@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_sourcing/app/views/styles/colors.dart';
 import 'package:hello_sourcing/app/views/styles/text_container.dart';
+import 'package:hello_sourcing/app/views/styles/text_style.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class ContactUsView extends StatelessWidget {
@@ -13,23 +14,22 @@ class ContactUsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(40),
-      child: FittedBox(
-        fit: BoxFit.contain,
-        child: ResponsiveBuilder(
-          builder: (context, sizingInformation) => Container(
+    return ResponsiveBuilder(
+      builder: (context, sizingInformation) => Container(
+        margin: sizingInformation.deviceScreenType == DeviceScreenType.mobile
+            ? EdgeInsets.all(0)
+            : EdgeInsets.all(40),
+        child: FittedBox(
+          fit: BoxFit.contain,
+          child: Container(
             padding: EdgeInsets.all(20),
             color: backgroundColor,
-            width: sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                ? Get.width
-                : Get.width / 1.5,
-            height: 600,
+            width: Get.width,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(height: 25),
-                TextContainerNormal(text: 'Contact Form'),
+                TextContainerNormal(text: 'Message Form'),
                 TextFormField(
                   controller: nameController,
                   decoration: InputDecoration(
@@ -61,9 +61,18 @@ class ContactUsView extends StatelessWidget {
                 ),
                 SizedBox(height: 25),
                 ConstrainedBox(
-                  constraints: BoxConstraints.tightFor(width: Get.width / 4),
+                  constraints: BoxConstraints.tightFor(
+                    width: 135,
+                    height: 50,
+                  ),
                   child: ElevatedButton(
-                      onPressed: () => sendMessage(), child: Text('SUBMIT')),
+                      style:
+                          ElevatedButton.styleFrom(primary: actionButtonColor),
+                      onPressed: () => sendMessage(),
+                      child: TextContainerNormal(
+                        text: 'SUBMIT',
+                        textStyle: textStyleNormalCenter,
+                      )),
                 )
               ],
             ),

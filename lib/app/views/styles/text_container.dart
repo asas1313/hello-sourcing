@@ -6,8 +6,10 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class TextContainerHeading extends StatelessWidget {
   final String text;
+  final TextStyle textStyle;
 
-  const TextContainerHeading({required this.text});
+  const TextContainerHeading(
+      {required this.text, this.textStyle = textStyleTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class TextContainerHeading extends StatelessWidget {
       ),
       child: SelectableText(
         text,
-        style: textStyleTitle,
+        style: textStyle,
       ),
     );
   }
@@ -38,9 +40,7 @@ class TextContainerNormal extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Container(
-        width: sizingInformation.deviceScreenType == DeviceScreenType.mobile
-            ? Get.width
-            : Get.width / 2,
+        width: Get.width,
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),

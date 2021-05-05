@@ -23,7 +23,7 @@ class ProductCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        viewportFraction: 0.6,
+        viewportFraction: 0.3,
         autoPlayAnimationDuration: const Duration(milliseconds: 100),
         autoPlay: true,
         enlargeCenterPage: true,

@@ -25,27 +25,17 @@ class NavigationDrawer extends GetWidget<RoutingController> {
                   },
                   child: Logo(),
                 ),
-                SizedBox(width: 15),
+                SizedBox(height: 27),
                 TextButton(
                   onPressed: () {
-                    controller.scrollToIndex(Routes.TRUSTCONFIDENCE);
+                    controller.scrollToIndex(Routes.ABOUTUS);
                   },
                   child: Text(
-                    'Trust & Confidence',
+                    'About us',
                     style: textStyleMenu,
                   ),
                 ),
-                SizedBox(width: 27),
-                TextButton(
-                  onPressed: () {
-                    controller.scrollToIndex(Routes.WHOWEARE);
-                  },
-                  child: Text(
-                    'Who are we?',
-                    style: textStyleMenu,
-                  ),
-                ),
-                SizedBox(width: 27),
+                SizedBox(height: 27),
                 TextButton(
                   onPressed: () {
                     controller.scrollToIndex(Routes.PRODUCTS);
@@ -55,43 +45,43 @@ class NavigationDrawer extends GetWidget<RoutingController> {
                     style: textStyleMenu,
                   ),
                 ),
-                SizedBox(width: 27),
+                SizedBox(height: 27),
                 TextButton(
                   onPressed: () {
-                    controller.scrollToIndex(Routes.OBJECTIVES);
+                    controller.scrollToIndex(Routes.SERVICES);
                   },
                   child: Text(
-                    'Objectives',
+                    'Services',
                     style: textStyleMenu,
                   ),
                 ),
-                SizedBox(width: 27),
+                SizedBox(height: 27),
                 TextButton(
                   onPressed: () {
-                    controller.scrollToIndex(Routes.OFFICE);
+                    controller.scrollToIndex(Routes.REVIEWS);
                   },
                   child: Text(
-                    'Office',
+                    'Reviews',
                     style: textStyleMenu,
                   ),
                 ),
-                SizedBox(width: 27),
+                SizedBox(height: 27),
                 TextButton(
                   onPressed: () {
                     controller.scrollToIndex(Routes.CONTACTUS);
                   },
                   child: Text(
-                    'Contact Us',
+                    'Message Us',
                     style: textStyleMenu,
                   ),
                 ),
-                SizedBox(width: 27),
+                SizedBox(height: 27),
                 TextButton(
                   onPressed: () {
-                    controller.scrollToIndex(Routes.OURCONTACTS);
+                    controller.scrollToIndex(Routes.OURTEAM);
                   },
                   child: Text(
-                    'Our Contacts',
+                    'Our Team',
                     style: textStyleMenu,
                   ),
                 ),

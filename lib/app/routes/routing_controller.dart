@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_sourcing/app/views/footer_view.dart';
 import 'package:hello_sourcing/app/views/main_view.dart';
-import 'package:hello_sourcing/app/views/objectives_view.dart';
-import 'package:hello_sourcing/app/views/office_contact_view.dart';
+import 'package:hello_sourcing/app/views/services_view.dart';
+import 'package:hello_sourcing/app/views/reviews_view.dart';
 import 'package:hello_sourcing/app/views/products_view.dart';
-import 'package:hello_sourcing/app/views/trustconfidence_view.dart';
-import 'package:hello_sourcing/app/views/whoweare_view.dart';
-import 'package:hello_sourcing/app/views/our_contacts_view.dart';
+import 'package:hello_sourcing/app/views/aboutus_view.dart';
+import 'package:hello_sourcing/app/views/our_team_view.dart';
 import 'package:hello_sourcing/app/views/contactus_view.dart';
+import 'package:hello_sourcing/app/views/willing_more.dart';
 
 class RoutingController extends GetxController {
   PageController controller = PageController();
 
   final pages = [
     MainView(),
-    TrustConfidenceView(),
-    WhoWeAreView(),
+    AboutusView(),
     ProductsView(),
-    ObjectivesView(),
-    OfficeContactView(),
+    ServicesView(),
+    WillingMoreView(),
+    ReviewsView(),
     ContactUsView(),
-    OurContactsView()
+    OurTeamView(),
+    FooterView(),
   ];
 
   void scrollToIndex(int index) {

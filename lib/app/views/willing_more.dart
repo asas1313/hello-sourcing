@@ -7,7 +7,7 @@ import 'package:hello_sourcing/app/views/styles/text_container.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class MainView extends StatelessWidget {
+class WillingMoreView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<RoutingController>();
@@ -26,18 +26,16 @@ class MainView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TextContainerHeading(
-                  text: 'Sourcing in Asia performed by a French team',
+                  text: 'Willing to know more ?',
+                  textStyle: textStyleTitleBold,
                 ),
-                TextContainerNormal(
-                    text:
-                        'Our teams are based in Europe and in Asia to provide information in due time to your teams. '),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: actionButtonColor),
                   onPressed: () {
-                    controller.scrollToIndex(Routes.ABOUTUS);
+                    controller.scrollToIndex(Routes.CONTACTUS);
                   },
                   child: Text(
-                    'About us',
+                    'Message us',
                     style: textStyleTitle,
                   ),
                 ),

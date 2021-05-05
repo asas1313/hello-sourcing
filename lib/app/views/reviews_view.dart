@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_sourcing/app/views/widgets/product_carousel.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'styles/colors.dart';
 import 'styles/text_container.dart';
 
-class ProductsView extends StatelessWidget {
+class ReviewsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
@@ -23,16 +22,15 @@ class ProductsView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TextContainerHeading(
-                  text: 'Products',
+                  text: 'Reviews',
                 ),
                 TextContainerNormal(
                   text:
-                      'In 2020, we sourced over 2,000 products from cosmetics, electronics, jewelry, personal protective equipment, and we branded over 300 items.',
+                      '“Thanks to Hello Sourcing, I’ve been able to source items for garden at a competitive price and with his partners, we were able to reduce our after sales service issues by 36% the first month” – Guillaume R. selling garden tools',
                 ),
-                Container(
-                  color: Color.fromRGBO(0, 0, 0, 0.75),
-                  width: Get.width / 1.5,
-                  child: ProductCarousel(),
+                TextContainerNormal(
+                  text:
+                      '“I tried several agents in Asia claiming to perform before contacting Sylvain. I’ve been impressed by his way to manage issues and the efficiency of his sourcing network. I highly recommend using his services” – Fabrice E. selling toys',
                 ),
               ],
             ),

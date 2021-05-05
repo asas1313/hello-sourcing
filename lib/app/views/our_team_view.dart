@@ -7,34 +7,30 @@ import 'package:hello_sourcing/app/views/styles/text_style.dart';
 import 'package:hello_sourcing/app/views/styles/wan.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class OurContactsView extends StatelessWidget {
+class OurTeamView extends StatelessWidget {
   final mobile;
 
-  OurContactsView({this.mobile = false});
+  OurTeamView({this.mobile = false});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(40),
-      child: FittedBox(
-        fit: BoxFit.contain,
-        child: ResponsiveBuilder(
-          builder: (context, sizingInformation) => Container(
+    return ResponsiveBuilder(
+      builder: (context, sizingInformation) => Container(
+        margin: sizingInformation.deviceScreenType == DeviceScreenType.mobile
+            ? EdgeInsets.all(0)
+            : EdgeInsets.all(40),
+        child: FittedBox(
+          fit: BoxFit.contain,
+          child: Container(
             color: backgroundColor,
-            height: 600,
-            width: sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                ? Get.width
-                : Get.width / 1.5,
+            width: Get.width,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(height: Get.height / 10),
                 FittedBox(
-                  fit: sizingInformation.deviceScreenType ==
-                          DeviceScreenType.mobile
-                      ? BoxFit.contain
-                      : BoxFit.contain,
+                  fit: BoxFit.contain,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [

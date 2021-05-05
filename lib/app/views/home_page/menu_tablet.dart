@@ -35,20 +35,10 @@ class MenuTablet extends GetWidget<RoutingController> {
                     children: [
                       TextButton(
                         onPressed: () {
-                          controller.scrollToIndex(Routes.TRUSTCONFIDENCE);
+                          controller.scrollToIndex(Routes.ABOUTUS);
                         },
                         child: Text(
-                          'Trust & Confidence',
-                          style: textStyleMenu,
-                        ),
-                      ),
-                      SizedBox(width: 27),
-                      TextButton(
-                        onPressed: () {
-                          controller.scrollToIndex(Routes.WHOWEARE);
-                        },
-                        child: Text(
-                          'Who are we?',
+                          'About us',
                           style: textStyleMenu,
                         ),
                       ),
@@ -65,20 +55,20 @@ class MenuTablet extends GetWidget<RoutingController> {
                       SizedBox(width: 27),
                       TextButton(
                         onPressed: () {
-                          controller.scrollToIndex(Routes.OBJECTIVES);
+                          controller.scrollToIndex(Routes.SERVICES);
                         },
                         child: Text(
-                          'Objectives',
+                          'Services',
                           style: textStyleMenu,
                         ),
                       ),
                       SizedBox(width: 27),
                       TextButton(
                         onPressed: () {
-                          controller.scrollToIndex(Routes.OFFICE);
+                          controller.scrollToIndex(Routes.REVIEWS);
                         },
                         child: Text(
-                          'Office',
+                          'Reviews',
                           style: textStyleMenu,
                         ),
                       ),
@@ -88,17 +78,17 @@ class MenuTablet extends GetWidget<RoutingController> {
                           controller.scrollToIndex(Routes.CONTACTUS);
                         },
                         child: Text(
-                          'Contact Us',
+                          'Message Us',
                           style: textStyleMenu,
                         ),
                       ),
                       SizedBox(width: 27),
                       TextButton(
                         onPressed: () {
-                          controller.scrollToIndex(Routes.OURCONTACTS);
+                          controller.scrollToIndex(Routes.OURTEAM);
                         },
                         child: Text(
-                          'Our Contacts',
+                          'Our Team',
                           style: textStyleMenu,
                         ),
                       ),

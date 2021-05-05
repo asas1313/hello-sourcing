@@ -1,10 +1,11 @@
 class Routes {
   static const HOME = 0;
-  static const TRUSTCONFIDENCE = 1;
-  static const WHOWEARE = 2;
-  static const PRODUCTS = 3;
-  static const OBJECTIVES = 4;
-  static const OFFICE = 5;
+  static const ABOUTUS = 1;
+  static const PRODUCTS = 2;
+  static const SERVICES = 3;
+  static const WILLINGMORE = 4;
+  static const REVIEWS = 5;
   static const CONTACTUS = 6;
-  static const OURCONTACTS = 7;
+  static const OURTEAM = 7;
+  static const FOOTER = 8;
 }
