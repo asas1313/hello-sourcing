@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hello_sourcing/app/views/styles/colors.dart';
 
-const MENU_FONT_SIZE = 12.0;
-const TITLE_FONT_SIZE = 60.0;
-const SUBTITLE_FONT_SIZE = 40.0;
-const NORMAL_FONT_SIZE = 30.0;
-const NORMAL_SMALLER_FONT_SIZE = 22.0;
+const MENU_FONT_SIZE = 16.0;
+const TITLE_FONT_SIZE = 40.0;
+const SUBTITLE_FONT_SIZE = 30.0;
+const NORMAL_FONT_SIZE = 22.0;
+const NORMAL_SMALLER_FONT_SIZE = 18.0;
 
 const textStyleTop = TextStyle(
   fontFamily: 'Poppins',

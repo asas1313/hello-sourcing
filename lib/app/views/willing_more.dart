@@ -27,14 +27,20 @@ class WillingMoreView extends StatelessWidget {
                   text: 'Willing to know more ?',
                   textStyle: textStyleTitleBold,
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: actionButtonColor),
-                  onPressed: () {
-                    controller.scrollTo(Routes.contactUs);
-                  },
-                  child: Text(
-                    'Message us',
-                    style: textStyleNormalSmaller,
+                ConstrainedBox(
+                  constraints: BoxConstraints.tightFor(
+                    width: 155,
+                    height: 50,
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: actionButtonColor),
+                    onPressed: () {
+                      controller.scrollTo(Routes.contactUs);
+                    },
+                    child: Text(
+                      'Message us',
+                      style: textStyleNormalSmaller,
+                    ),
                   ),
                 ),
               ],

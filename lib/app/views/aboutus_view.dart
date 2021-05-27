@@ -35,11 +35,11 @@ class AboutusView extends StatelessWidget {
                       alignment: Alignment(0, 0),
                       child: Column(
                         children: [
-                          TextContainerNormal(
+                          TextContainerNormalAlignLeft(
                             text: 'Added Value',
                             textStyle: textStyleSubtitle,
                           ),
-                          TextContainerNormal(
+                          TextContainerNormalAlignLeft(
                               text:
                                   'Service in French\nAvailability in different time zone through our partnerships'),
                         ],
@@ -54,11 +54,11 @@ class AboutusView extends StatelessWidget {
                       alignment: Alignment(0, 0),
                       child: Column(
                         children: [
-                          TextContainerNormal(
+                          TextContainerNormalAlignLeft(
                             text: 'Product range sourced',
                             textStyle: textStyleSubtitle,
                           ),
-                          TextContainerNormal(
+                          TextContainerNormalAlignLeft(
                               text:
                                   'Cosmetics, garden tools, accessories, toys for children, …'),
                         ],
@@ -73,11 +73,11 @@ class AboutusView extends StatelessWidget {
                       alignment: Alignment(0, 0),
                       child: Column(
                         children: [
-                          TextContainerNormal(
+                          TextContainerNormalAlignLeft(
                             text: 'Location',
                             textStyle: textStyleSubtitle,
                           ),
-                          TextContainerNormal(
+                          TextContainerNormalAlignLeft(
                               text:
                                   'Warehouse : Ningbo, China\nOffice : Bangkok, Thailand\nSales : Lille, France '),
                         ],

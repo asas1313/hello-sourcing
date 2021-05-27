@@ -29,14 +29,20 @@ class MainView extends StatelessWidget {
                 TextContainerNormal(
                     text:
                         'Our teams are based in Europe and in Asia\nto provide information in due time to your teams. '),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: actionButtonColor),
-                  onPressed: () {
-                    controller.scrollTo(Routes.aboutUs);
-                  },
-                  child: Text(
-                    'About us',
-                    style: textStyleNormalSmaller,
+                ConstrainedBox(
+                  constraints: BoxConstraints.tightFor(
+                    width: 135,
+                    height: 50,
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: actionButtonColor),
+                    onPressed: () {
+                      controller.scrollTo(Routes.aboutUs);
+                    },
+                    child: Text(
+                      'About us',
+                      style: textStyleNormalSmaller,
+                    ),
                   ),
                 ),
               ],

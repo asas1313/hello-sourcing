@@ -22,8 +22,15 @@ class ContactUsView extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                sizingInformation.deviceScreenType == DeviceScreenType.mobile
+                    ? ContactUsForm()
+                    : Container(width: 0, height: 0),
                 Row(
                   children: [
+                    sizingInformation.deviceScreenType !=
+                            DeviceScreenType.mobile
+                        ? ContactUsForm()
+                        : Container(width: 0, height: 0),
                     Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -108,15 +115,8 @@ class ContactUsView extends StatelessWidget {
                         ),
                       ],
                     ),
-                    sizingInformation.deviceScreenType !=
-                            DeviceScreenType.mobile
-                        ? ContactUsForm()
-                        : Container(width: 0, height: 0),
                   ],
                 ),
-                sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                    ? ContactUsForm()
-                    : Container(width: 0, height: 0),
               ],
             ),
           ),
