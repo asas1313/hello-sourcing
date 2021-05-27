@@ -34,7 +34,7 @@ class WillingMoreView extends StatelessWidget {
                   },
                   child: Text(
                     'Message us',
-                    style: textStyleTitle,
+                    style: textStyleNormalSmaller,
                   ),
                 ),
               ],

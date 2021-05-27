@@ -24,11 +24,11 @@ class MainView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TextContainerHeading(
-                  text: 'Sourcing in Asia performed by a French team',
+                  text: 'Sourcing in Asia\nperformed by a French team',
                 ),
                 TextContainerNormal(
                     text:
-                        'Our teams are based in Europe and in Asia to provide information in due time to your teams. '),
+                        'Our teams are based in Europe and in Asia\nto provide information in due time to your teams. '),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: actionButtonColor),
                   onPressed: () {
@@ -36,7 +36,7 @@ class MainView extends StatelessWidget {
                   },
                   child: Text(
                     'About us',
-                    style: textStyleTitle,
+                    style: textStyleNormalSmaller,
                   ),
                 ),
               ],

@@ -38,7 +38,7 @@ class ContactUsView extends StatelessWidget {
                               children: [
                                 TextContainerNormal(
                                   text: 'Sylvain Balieu',
-                                  textStyle: textStyleNormalBold,
+                                  textStyle: textStyleNormalSmallerBold,
                                   widthModifier:
                                       sizingInformation.deviceScreenType ==
                                               DeviceScreenType.mobile
@@ -48,7 +48,7 @@ class ContactUsView extends StatelessWidget {
                                 TextContainerNormal(
                                   text:
                                       'Founder HelloSourcing Co,Ltd\nEmail: sylvain@hellosourcing.asia\nTel: +66(0)9 74 91 54 28',
-                                  textStyle: textStyleNormal,
+                                  textStyle: textStyleNormalSmaller,
                                   widthModifier:
                                       sizingInformation.deviceScreenType ==
                                               DeviceScreenType.mobile
@@ -77,7 +77,7 @@ class ContactUsView extends StatelessWidget {
                               children: [
                                 TextContainerNormal(
                                   text: 'Phatthanan Chunkla (Wan)',
-                                  textStyle: textStyleNormalBold,
+                                  textStyle: textStyleNormalSmallerBold,
                                   widthModifier:
                                       sizingInformation.deviceScreenType ==
                                               DeviceScreenType.mobile
@@ -87,7 +87,7 @@ class ContactUsView extends StatelessWidget {
                                 TextContainerNormal(
                                   text:
                                       'Director HelloSourcing Co,Ltd\nEmail: wan@hellosourcing.asia\nTel: +66(0)6 45 96 54 22',
-                                  textStyle: textStyleNormal,
+                                  textStyle: textStyleNormalSmaller,
                                   widthModifier:
                                       sizingInformation.deviceScreenType ==
                                               DeviceScreenType.mobile

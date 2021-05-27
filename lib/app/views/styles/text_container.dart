@@ -20,6 +20,7 @@ class TextContainerHeading extends StatelessWidget {
       child: SelectableText(
         text,
         style: textStyle,
+        textAlign: TextAlign.center,
       ),
     );
   }
@@ -48,6 +49,7 @@ class TextContainerNormal extends StatelessWidget {
         child: SelectableText(
           text,
           style: textStyle,
+          textAlign: TextAlign.center,
         ),
       ),
     );

@@ -67,9 +67,9 @@ class ContactUsForm extends StatelessWidget {
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: actionButtonColor),
                     onPressed: () => sendMessage(),
-                    child: TextContainerNormal(
-                      text: 'SUBMIT',
-                      textStyle: textStyleNormalCenter,
+                    child: Text(
+                      'SUBMIT',
+                      style: textStyleNormalSmaller,
                     )),
               )
             ],
