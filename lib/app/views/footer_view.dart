@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_sourcing/app/routes/app_routes.dart';
 import 'package:hello_sourcing/app/routes/routing_controller.dart';
-import 'package:hello_sourcing/app/views/styles/colors.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
 import 'package:hello_sourcing/app/views/terms_view.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -21,15 +20,14 @@ class FooterView extends StatelessWidget {
           alignment: Alignment.topCenter,
           fit: BoxFit.contain,
           child: Container(
-            color: backgroundColor,
-            width: Get.width / 1.5,
+            width: Get.width,
             height: 20,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TextButton(
                   onPressed: () {
-                    controller.scrollToIndex(Routes.CONTACTUS);
+                    controller.scrollTo(Routes.contactUs);
                   },
                   child: Text(
                     'Contact',

@@ -30,7 +30,7 @@ class MenuMobile extends GetWidget<RoutingController> {
                     ),
                     TextButton(
                       onPressed: () {
-                        controller.scrollToIndex(Routes.HOME);
+                        controller.scrollTo(Routes.home);
                       },
                       child: Logo(),
                     ),

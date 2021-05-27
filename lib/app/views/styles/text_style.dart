@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hello_sourcing/app/views/styles/colors.dart';
 
+const MENU_FONT_SIZE = 16.0;
+const TITLE_FONT_SIZE = 40.0;
+const SUBTITLE_FONT_SIZE = 30.0;
+const NORMAL_FONT_SIZE = 22.0;
+const NORMAL_SMALLER_FONT_SIZE = 18.0;
+
 const textStyleTop = TextStyle(
   fontFamily: 'Poppins',
   color: topBarItemColor,
-  fontSize: 12,
+  fontSize: MENU_FONT_SIZE,
   fontWeight: FontWeight.w700,
   letterSpacing: 0,
 );
@@ -12,31 +18,31 @@ const textStyleTop = TextStyle(
 const textStyleMenu = TextStyle(
   fontFamily: 'Poppins',
   color: Colors.white,
-  fontSize: 12,
+  fontSize: MENU_FONT_SIZE,
   fontWeight: FontWeight.w900,
   letterSpacing: 1,
 );
 
 const textStyleTitle = TextStyle(
   fontFamily: 'Poppins',
-  color: contentTextColor,
-  fontSize: 36,
-  fontWeight: FontWeight.w500,
+  color: titleColor,
+  fontSize: TITLE_FONT_SIZE,
+  fontWeight: FontWeight.w600,
   letterSpacing: 1.5,
 );
 
 const textStyleTitleBold = TextStyle(
   fontFamily: 'Poppins',
-  color: contentTextColor,
-  fontSize: 36,
+  color: titleColor,
+  fontSize: TITLE_FONT_SIZE,
   fontWeight: FontWeight.w900,
   letterSpacing: 1.5,
 );
 
 const textStyleSubtitle = TextStyle(
   fontFamily: 'Poppins',
-  color: contentTextColor,
-  fontSize: 30,
+  color: titleColor,
+  fontSize: SUBTITLE_FONT_SIZE,
   fontWeight: FontWeight.w500,
   letterSpacing: 1.5,
 );
@@ -44,23 +50,23 @@ const textStyleSubtitle = TextStyle(
 const textStyleNormal = TextStyle(
   fontFamily: 'Poppins',
   color: contentTextColor,
-  fontSize: 24,
+  fontSize: NORMAL_FONT_SIZE,
   fontWeight: FontWeight.w300,
   letterSpacing: 1,
 );
 
-const textStyleNormalCenter = TextStyle(
+const textStyleNormalSmaller = TextStyle(
   fontFamily: 'Poppins',
   color: contentTextColor,
-  fontSize: 24,
+  fontSize: NORMAL_SMALLER_FONT_SIZE,
   fontWeight: FontWeight.w300,
   letterSpacing: 1,
 );
 
-const textStyleNormalBold = TextStyle(
+const textStyleNormalSmallerBold = TextStyle(
   fontFamily: 'Poppins',
   color: contentTextColor,
-  fontSize: 24,
+  fontSize: NORMAL_SMALLER_FONT_SIZE,
   fontWeight: FontWeight.w900,
   letterSpacing: 1,
 );

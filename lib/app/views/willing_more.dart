@@ -16,11 +16,9 @@ class WillingMoreView extends StatelessWidget {
         margin: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? EdgeInsets.all(0)
             : EdgeInsets.all(40),
-        child: FittedBox(
-          fit: BoxFit.contain,
+        child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(20),
-            color: backgroundColor,
             width: Get.width,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -29,14 +27,20 @@ class WillingMoreView extends StatelessWidget {
                   text: 'Willing to know more ?',
                   textStyle: textStyleTitleBold,
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: actionButtonColor),
-                  onPressed: () {
-                    controller.scrollToIndex(Routes.CONTACTUS);
-                  },
-                  child: Text(
-                    'Message us',
-                    style: textStyleTitle,
+                ConstrainedBox(
+                  constraints: BoxConstraints.tightFor(
+                    width: 155,
+                    height: 50,
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: actionButtonColor),
+                    onPressed: () {
+                      controller.scrollTo(Routes.contactUs);
+                    },
+                    child: Text(
+                      'Message us',
+                      style: textStyleNormalSmaller,
+                    ),
                   ),
                 ),
               ],

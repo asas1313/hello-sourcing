@@ -16,29 +16,33 @@ class MainView extends StatelessWidget {
         margin: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? EdgeInsets.all(0)
             : EdgeInsets.all(40),
-        child: FittedBox(
-          fit: BoxFit.contain,
+        child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(20),
-            color: backgroundColor,
             width: Get.width,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TextContainerHeading(
-                  text: 'Sourcing in Asia performed by a French team',
+                  text: 'Sourcing in Asia\nperformed by a French team',
                 ),
                 TextContainerNormal(
                     text:
-                        'Our teams are based in Europe and in Asia to provide information in due time to your teams. '),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: actionButtonColor),
-                  onPressed: () {
-                    controller.scrollToIndex(Routes.ABOUTUS);
-                  },
-                  child: Text(
-                    'About us',
-                    style: textStyleTitle,
+                        'Our teams are based in Europe and in Asia\nto provide information in due time to your teams. '),
+                ConstrainedBox(
+                  constraints: BoxConstraints.tightFor(
+                    width: 135,
+                    height: 50,
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: actionButtonColor),
+                    onPressed: () {
+                      controller.scrollTo(Routes.aboutUs);
+                    },
+                    child: Text(
+                      'About us',
+                      style: textStyleNormalSmaller,
+                    ),
                   ),
                 ),
               ],

@@ -1,17 +1,13 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_sourcing/app/views/styles/colors.dart';
+import 'package:hello_sourcing/app/views/styles/sylvain.dart';
 import 'package:hello_sourcing/app/views/styles/text_container.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
+import 'package:hello_sourcing/app/views/styles/wan.dart';
+import 'package:hello_sourcing/app/views/widgets/contactus_form.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class ContactUsView extends StatelessWidget {
-  final nameController = TextEditingController();
-  final emailController = TextEditingController();
-  final questionController = TextEditingController();
-  final messageController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
@@ -19,102 +15,113 @@ class ContactUsView extends StatelessWidget {
         margin: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? EdgeInsets.all(0)
             : EdgeInsets.all(40),
-        child: FittedBox(
-          fit: BoxFit.contain,
+        child: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.all(20),
-            color: backgroundColor,
             width: Get.width,
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: 25),
-                TextContainerNormal(text: 'Message Form'),
-                TextFormField(
-                  controller: nameController,
-                  decoration: InputDecoration(
-                      labelText: 'Name: ',
-                      labelStyle: TextStyle(color: Colors.white)),
-                  style: TextStyle(color: Colors.white),
+                sizingInformation.deviceScreenType == DeviceScreenType.mobile
+                    ? ContactUsForm()
+                    : Container(width: 0, height: 0),
+                Row(
+                  children: [
+                    sizingInformation.deviceScreenType !=
+                            DeviceScreenType.mobile
+                        ? ContactUsForm()
+                        : Container(width: 0, height: 0),
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SizedBox(height: Get.height / 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                TextContainerNormal(
+                                  text: 'Sylvain Balieu',
+                                  textStyle: textStyleNormalSmallerBold,
+                                  widthModifier:
+                                      sizingInformation.deviceScreenType ==
+                                              DeviceScreenType.mobile
+                                          ? 0.95
+                                          : 0.35,
+                                ),
+                                TextContainerNormal(
+                                  text:
+                                      'Founder HelloSourcing Co,Ltd\nEmail: sylvain@hellosourcing.asia\nTel: +66(0)9 74 91 54 28',
+                                  textStyle: textStyleNormalSmaller,
+                                  widthModifier:
+                                      sizingInformation.deviceScreenType ==
+                                              DeviceScreenType.mobile
+                                          ? 0.95
+                                          : 0.35,
+                                ),
+                                sizingInformation.deviceScreenType ==
+                                        DeviceScreenType.mobile
+                                    ? Sylvain()
+                                    : Container(width: 0, height: 0),
+                              ],
+                            ),
+                            sizingInformation.deviceScreenType !=
+                                    DeviceScreenType.mobile
+                                ? Sylvain()
+                                : Container(width: 0, height: 0),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                TextContainerNormal(
+                                  text: 'Phatthanan Chunkla (Wan)',
+                                  textStyle: textStyleNormalSmallerBold,
+                                  widthModifier:
+                                      sizingInformation.deviceScreenType ==
+                                              DeviceScreenType.mobile
+                                          ? 0.95
+                                          : 0.35,
+                                ),
+                                TextContainerNormal(
+                                  text:
+                                      'Director HelloSourcing Co,Ltd\nEmail: wan@hellosourcing.asia\nTel: +66(0)6 45 96 54 22',
+                                  textStyle: textStyleNormalSmaller,
+                                  widthModifier:
+                                      sizingInformation.deviceScreenType ==
+                                              DeviceScreenType.mobile
+                                          ? 0.95
+                                          : 0.35,
+                                ),
+                                sizingInformation.deviceScreenType ==
+                                        DeviceScreenType.mobile
+                                    ? Wan()
+                                    : Container(width: 0, height: 0),
+                              ],
+                            ),
+                            sizingInformation.deviceScreenType !=
+                                    DeviceScreenType.mobile
+                                ? Wan()
+                                : Container(width: 0, height: 0),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                TextFormField(
-                  controller: emailController,
-                  decoration: InputDecoration(
-                      labelText: 'E-mail: ',
-                      labelStyle: TextStyle(color: Colors.white)),
-                  style: TextStyle(color: Colors.white),
-                ),
-                TextFormField(
-                  controller: questionController,
-                  decoration: InputDecoration(
-                      labelText: 'Question: ',
-                      labelStyle: TextStyle(color: Colors.white)),
-                  style: TextStyle(color: Colors.white),
-                ),
-                TextFormField(
-                  maxLines: 5,
-                  controller: messageController,
-                  decoration: InputDecoration(
-                      labelText: 'Message: ',
-                      labelStyle: TextStyle(color: Colors.white)),
-                  style: TextStyle(color: Colors.white),
-                ),
-                SizedBox(height: 25),
-                ConstrainedBox(
-                  constraints: BoxConstraints.tightFor(
-                    width: 135,
-                    height: 50,
-                  ),
-                  child: ElevatedButton(
-                      style:
-                          ElevatedButton.styleFrom(primary: actionButtonColor),
-                      onPressed: () => sendMessage(),
-                      child: TextContainerNormal(
-                        text: 'SUBMIT',
-                        textStyle: textStyleNormalCenter,
-                      )),
-                )
               ],
             ),
           ),
         ),
       ),
     );
-  }
-
-  void sendMessage() {
-    if (!emailController.text.isEmail ||
-        (questionController.text.isEmpty && messageController.text.isEmpty)) {
-      Get.snackbar(
-        'Error',
-        'Please provide your e-mail and question or message!',
-        backgroundColor: Colors.red,
-      );
-      return null;
-    }
-    FirebaseFirestore.instance.collection('mail').add({
-      'to': 'sylvain@hellosourcing.asia',
-      'message': {
-        'from': emailController.text,
-        'subject': nameController.text + ' sent a message for You',
-        'html': 'Name: ' +
-            nameController.text +
-            '.<br/>E-mail: ' +
-            emailController.text +
-            '.<br/>Question: ' +
-            questionController.text +
-            '.<br/>Message: ' +
-            messageController.text,
-      },
-    }).then((value) {
-      Get.snackbar('Information', 'Message sent.');
-      emailController.text = '';
-      nameController.text = '';
-      questionController.text = '';
-      messageController.text = '';
-    }).catchError((error) {
-      print("Failed to save email: $error");
-    });
-    Get.back();
   }
 }

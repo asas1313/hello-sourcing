@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_sourcing/app/views/styles/colors.dart';
 import 'package:hello_sourcing/app/views/styles/text_style.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -17,11 +16,11 @@ class TextContainerHeading extends StatelessWidget {
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        color: textBackgroundColor,
       ),
       child: SelectableText(
         text,
         style: textStyle,
+        textAlign: TextAlign.center,
       ),
     );
   }
@@ -30,25 +29,57 @@ class TextContainerHeading extends StatelessWidget {
 class TextContainerNormal extends StatelessWidget {
   final String text;
   final TextStyle textStyle;
+  final double widthModifier;
 
   TextContainerNormal({
     required this.text,
     this.textStyle = textStyleNormal,
+    this.widthModifier = 1.0,
   });
 
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Container(
-        width: Get.width,
+        width: Get.width * widthModifier,
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          color: textBackgroundColor,
         ),
         child: SelectableText(
           text,
           style: textStyle,
+          textAlign: TextAlign.center,
+        ),
+      ),
+    );
+  }
+}
+
+class TextContainerNormalAlignLeft extends StatelessWidget {
+  final String text;
+  final TextStyle textStyle;
+  final double widthModifier;
+
+  TextContainerNormalAlignLeft({
+    required this.text,
+    this.textStyle = textStyleNormalSmaller,
+    this.widthModifier = 1.0,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveBuilder(
+      builder: (context, sizingInformation) => Container(
+        width: Get.width * widthModifier,
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: SelectableText(
+          text,
+          style: textStyle,
+          textAlign: TextAlign.left,
         ),
       ),
     );
