@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
-import 'styles/colors.dart';
 import 'styles/text_container.dart';
 
 class ReviewsView extends StatelessWidget {
@@ -13,10 +11,8 @@ class ReviewsView extends StatelessWidget {
         margin: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? EdgeInsets.all(0)
             : EdgeInsets.all(40),
-        child: FittedBox(
-          fit: BoxFit.contain,
+        child: SingleChildScrollView(
           child: Container(
-            color: backgroundColor,
             width: Get.width,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

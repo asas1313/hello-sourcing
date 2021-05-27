@@ -1,11 +1,12 @@
+import 'package:flutter/material.dart';
+
 class Routes {
-  static const HOME = 0;
-  static const ABOUTUS = 1;
-  static const PRODUCTS = 2;
-  static const SERVICES = 3;
-  static const WILLINGMORE = 4;
-  static const REVIEWS = 5;
-  static const CONTACTUS = 6;
-  static const OURTEAM = 7;
-  static const FOOTER = 8;
+  static final home = new GlobalKey();
+  static final aboutUs = new GlobalKey();
+  static final products = new GlobalKey();
+  static final services = new GlobalKey();
+  static final willingMore = new GlobalKey();
+  static final reviews = new GlobalKey();
+  static final contactUs = new GlobalKey();
+  static final footer = new GlobalKey();
 }

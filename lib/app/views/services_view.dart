@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:hello_sourcing/app/views/styles/text_container.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'styles/colors.dart';
-
 class ServicesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,10 +11,8 @@ class ServicesView extends StatelessWidget {
         margin: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? EdgeInsets.all(0)
             : EdgeInsets.all(40),
-        child: FittedBox(
-          fit: BoxFit.contain,
+        child: SingleChildScrollView(
           child: Container(
-            color: backgroundColor,
             width: Get.width,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

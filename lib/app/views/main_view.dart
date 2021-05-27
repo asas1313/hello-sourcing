@@ -16,11 +16,9 @@ class MainView extends StatelessWidget {
         margin: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? EdgeInsets.all(0)
             : EdgeInsets.all(40),
-        child: FittedBox(
-          fit: BoxFit.contain,
+        child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(20),
-            color: backgroundColor,
             width: Get.width,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -34,7 +32,7 @@ class MainView extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: actionButtonColor),
                   onPressed: () {
-                    controller.scrollToIndex(Routes.ABOUTUS);
+                    controller.scrollTo(Routes.aboutUs);
                   },
                   child: Text(
                     'About us',
